@@ -4,7 +4,7 @@
 #include <string>
 
 int main(void){
-    std::cout << "Welcome to the program\n";
+    std::cout << "=== Welcome to Profile Creator ===";
     bool morePeople {true};
     std::vector <std::string> names{};
     std::vector <int> ages{};
@@ -12,23 +12,23 @@ int main(void){
     std::vector <std::string> hobbies{};
      
     while (morePeople){
-        std::cout << "Name: ";
+        std::cout << "Enter your full name: ";
         std::string name{};
         std::getline(std::cin, name);
         names.push_back(name);
         
         
-        std::cout << "Age: ";
+        std::cout << "Enter your age: ";
         unsigned int age {};
         std::cin >> age;
         ages.push_back(age);
         
-        std::cout << "City: ";
+        std::cout << "Enter your city: ";
         std::string city{};
         std::cin >> city;
         cities.push_back(city);
         
-        std::cout << "Favourite hobby: ";
+        std::cout << "Enter your favourite hobby: ";
         std::string hobby{};
         std::cin >> hobby;
         hobbies.push_back(hobby);
@@ -46,6 +46,7 @@ int main(void){
     // Printing out values to the console while setting their width.
     std::cout << std::setw(defaultSize * 2) << "Name" << std::setw(defaultSize) << "Age" << std::setw(defaultSize) << "City" << std::setw(defaultSize * 2) << "Favourite Hobby" << '\n';
     
+    //Loop which will take elements from every vector and print to the console nicely.
     for (unsigned int i = 0; i < names.size(); i++) std::cout << std::setw(defaultSize * 2) << names[i] << std::setw(defaultSize) << ages[i] << std::setw(defaultSize) << cities[i] << std::setw(defaultSize) << hobbies[i] << '\n';
     
 }
